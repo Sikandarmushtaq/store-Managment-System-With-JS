@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Background */
+.overlay {
+  background: url("https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0") no-repeat center/cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Invoice box */
+.invoice {
+  background: rgba(255,255,255,0.92);
+  width: 800px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+}
+
+/* Info */
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+/* Add item */
+.add-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.add-item select,
+.add-item input {
+  padding: 8px;
+  flex: 1;
+}
+
+.add-item button {
+  padding: 8px 15px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: black;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Total */
+.total {
+  text-align: right;
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Print button */
+.print-area {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.print-area button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* 🖨 PRINT MODE */
+@media print {
+
+  body {
+    background: white;
+  }
+
+  .overlay {
+    background: none;
+  }
+
+  .print-area,
+  .add-item {
+    display: none; /* hide buttons in print */
+  }
+
+  .invoice {
+    box-shadow: none;
+    width: 100%;
+  }
+}

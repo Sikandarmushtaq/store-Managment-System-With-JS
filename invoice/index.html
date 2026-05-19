@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stylish Invoice</title>
+  <link rel="stylesheet" href="in.css">
+</head>
+<body>
+
+<div class="overlay">
+
+<div class="invoice">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Pakistan Store Invoice</h1>
+    <p>Shop Management System</p>
+  </div>
+
+  <!-- Info -->
+  <div class="info">
+    <div>
+      <p><b>Invoice #:</b> 001</p>
+      <p><b>Date:</b> 04-05-2026</p>
+    </div>
+    <div>
+      <p><b>Customer:</b> Walk-in</p>
+    </div>
+  </div>
+
+  <!-- Item Selector -->
+  <div class="add-item">
+    <select id="itemSelect">
+      <option value="" selected disabled>Select Item</option>
+      <option value="Rice|200">Rice - 200</option>
+      <option value="Sugar|150">Sugar - 150</option>
+      <option value="Flour|300">Flour - 300</option>
+      <option value="Milk|180">Milk - 180</option>
+      <option value="Oil|500">Oil - 500</option>
+    </select>
+
+    <input type="number" id="qty" placeholder="Qty" min="1">
+
+    <button id="additem">Add Item</button>
+  </div>
+
+  <!-- Table -->
+  <table>
+    <thead>
+      <tr>
+        <th id="items">Item</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+
+    <tbody >
+   <tr id="itemsBody">
+
+    
+   </tr>
+    </tbody>
+  </table>
+
+  <!-- Total -->
+  <div class="total">
+    <h2 id="totalAmount">Total: 0 PKR</h2>
+  </div>
+
+  <!-- Print Button -->
+  <div class="print-area">
+    <button id="printbtn" >🖨 Print Invoice</button>
+  </div>
+
+</div>
+
+</div>
+<script src="in.js"></script>
+</body>
+</html>
